@@ -1,12 +1,21 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
-
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
+.tabs {
+    display: flex;
+  }
+  
+  .tab {
+    padding: 8px 16px;
+    border: 1px solid gray;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: gray;
+    color: white;
+  }
+  
+  .viewport {
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid gray;
+  }
+  
