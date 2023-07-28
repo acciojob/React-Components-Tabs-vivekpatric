@@ -6,7 +6,7 @@ import Viewport from './Viewport';
 function App() {
   return (
     <div className="app">
-      <Tabs />
+      <Tabs  />
       <Viewport />
     </div>
   );
