@@ -1,51 +1,15 @@
-import React, { useState } from "react";
-import './';
+import React from 'react';
+import './App.css';
+import Tabs from './Tabs';
+import Viewport from './Viewport';
 
-const TABS = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "features", label: "Features" }
-];
-
-const Tab = ({ id, label, activeTab, onClick }) => (
-  <div
-    className={`tab ${activeTab === id ? "active" : ""}`}
-    id={`${id}-tab`}
-    onClick={() => onClick(id)}
-  >
-    {label}
-  </div>
-);
-
-const Tabs = () => {
-  const [activeTab, setActiveTab] = useState(TABS[0].id);
-
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId);
-  };
-
+function App() {
   return (
-    <div className="tabs">
-      {TABS.map((tab) => (
-        <Tab
-          key={tab.id}
-          id={tab.id}
-          label={tab.label}
-          activeTab={activeTab}
-          onClick={handleTabClick}
-        />
-      ))}
-      <div className="viewport">
-        Pages Go Here for {activeTab}
-      </div>
-    </div>
-  );
-};
-
-export default function App() {
-  return (
-    <div className="App">
+    <div className="app">
       <Tabs />
+      <Viewport />
     </div>
   );
 }
+
+export default App;
